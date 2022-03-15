@@ -1,0 +1,210 @@
+
+body {
+	margin: 10px;
+	background: -webkit-linear-gradient(#21004F, #9580FF);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.grid-container {
+
+	display: grid;
+	grid-template-columns: 1fr;
+
+	grid-template-areas: 
+		"datum"
+		"afbeelding"
+		"tijd"
+		"aftellen"
+		;
+
+}
+
+img {
+ 	width: 100%;
+ 	border-radius: 30px 30px;
+}
+
+H1 {
+	color: #95A1FF;
+	font-family: urbana,sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 30px;
+}
+
+p {
+	color: #93D3FF;
+	font-family: clone-rounded-latin,sans-serif;
+	font-weight: 800;
+	font-style: normal;
+	font-size: 50px;
+	margin-top: -20px;
+
+
+}
+
+
+.grid-item {
+	background-color: rgba(0, 0, 0, 0.3);
+	margin-bottom: 10px;
+	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-top-left-radius: 30px 30px;
+	border-top-right-radius: 30px 30px;
+	border-bottom-left-radius: 30px 30px;
+	border-bottom-right-radius: 30px 30px;
+}
+
+.onderdeel1 {
+	grid-area: datum;
+	margin-top: 80px;
+	margin-bottom: -30px;
+	border: none;
+	background-color: rgba(0, 0, 0, 0.0);
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding-right: 20px;
+
+}
+#datum {
+	font-size: 50px;
+	color: white;
+
+}
+
+.onderdeel2 {
+	grid-area: afbeelding;
+	border-radius: 30px 30px;
+	align-content: center;
+	padding: 0px;
+}
+
+.onderdeel3 {
+	grid-area: tijd;
+	text-align: center;
+	border-top-left-radius: 30px 30px;
+	border-top-right-radius: 30px 30px;
+	border-bottom-left-radius: 30px 30px;
+	border-bottom-right-radius: 30px 30px;
+}
+
+
+
+.onderdeel4{
+	grid-area: aftellen;
+	text-align: center;
+	border-top-left-radius: 30px 30px;
+	border-top-right-radius: 30px 30px;
+	border-bottom-left-radius: 30px 30px;
+	border-bottom-right-radius: 30px 30px;
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 834px) and (max-width: 1279px){
+
+	.grid-container {
+
+		display: grid;
+		grid-template-columns: 2fr;
+
+		grid-template-areas: 
+			"datum"
+			"tijd" 
+			"aftellen"
+			"afbeelding"
+			;
+	}
+
+	H1 {
+		font-size: 25px;
+		margin-top: 35px;
+	}
+
+	p {
+		font-size: 65px;
+	}
+
+}
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1919px){
+
+	.grid-container {
+
+		display: grid;
+		grid-template-columns: 3fr;
+
+		grid-template-areas: 
+			"datum datum"
+			"tijd afbeelding" 
+			"aftellen afbeelding"
+			;
+	}
+
+	.onderdeel2 {
+		margin-left: 20px;
+		width: 700px;
+	}
+
+
+
+}
+
+
+@media only screen and (min-width: 1920px){
+
+	body{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+
+	.grid-container {
+
+		display: grid;
+		grid-template-columns: 2fr;
+
+		grid-template-areas: 
+			"datum datum"
+			"afbeelding afbeelding" 
+			"tijd aftellen"
+			;
+	}
+
+	.onderdeel1 {
+		grid-area: datum;
+		margin-top: 100px;
+		margin-bottom: -30px;
+		border: none;
+		background-color: rgba(0, 0, 0, 0.0);
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-right: 0px;
+
+	}
+ 
+ 	.onderdeel2 {
+		margin-left: 250px;
+		width: 1200px;
+	}
+
+	.onderdeel3, .onderdeel4 {
+		width: 840px;
+	}
+	
+
+
+}
+
+
+
